@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        body {
+            background-color: #FBF0F0;
+            margin-left: 33%;
+            margin-top: 1%;
+        }
+
+        p input,
+        select {
+            margin: 10px;
+        }
+
+        form {
+            width: 50%;
+            border: 1px solid #333;
+            padding: 15px;
+            margin-bottom: 12%;
+        }
+
+    </style>
+    <!--Заголовок-->
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="action_form.php" method="POST">
+        <p>
+            Имя <input type="text" name="firstname" value=""><br>
+            Фамилия <input type="text" name="lastname" value=""><br>
+            Email <input type="text" name="email" value=""><br>
+            Телефон <input type="text" name="telefone" value=""><br>
+            Выберите мимишную услугу <select name="choice">
+                <option value="Обнимашки">Обнимашки</option>
+                <option value="Внусненько накормить">Внусненько накормить</option>
+                <option value="Сводить в парк">Сводить в парк</option>
+                <option value="Посмотреть вместе фильм">Посмотреть вместе фильм</option>
+                <option value="Купить киндер">Купить киндер</option>
+                <option value="Подарить подарочек">Подарить подарочек</option>
+            </select><br>
+            Что-то случилось?( <br>
+            <input type="radio" name="choiceradio" value="1">Да:(<br>
+            <input type="radio" name="choiceradio" value="2"> Нет:)
+            <br>
+            Напишите,что желаете, например, что Вас беспокоит или пожелания нам)<br><textarea rows="4" cols="45" name="text"></textarea>
+            <img src="ulibka.jpg" width="160px" height="160px"> </p>
+    </form>
+
+    <form action="action_form.php" method="POST">
+        <p>
+            Обращение
+            <input type="radio" name="choiceradio" value="1">Г-н
+            <input type="radio" name="choiceradio" value="2">Г-жа
+            <br>
+            Имя <input type="text" name="firstname" value=""><br>
+            Фамилия <input type="text" name="lastname" value=""><br>
+            Email <input type="text" name="email" value=""><br>
+            Телефон <input type="text" name="telefone" value=""><br>
+            Пароль <input type="password" name="password" value=""><br>
+            Подтвердите пароль <input type="password" name="password" value=""><br>
+            Страна <select name="choice">
+                <option value="Канада">Канада</option>
+                <option value="США">США</option>
+                <option value="Россия">Россия</option>
+                <option value="Беларусь">Беларусь</option>
+                <option value="Испания">Испания</option>
+            </select><br>
+            <input type="checkbox" name="" value="checked">Я согласен <a href="#">с условиями использования</a>
+            <br>
+            <input type="submit" value="Зарегистрироваться">
+        </p>
+    </form>
+</body>
+
+</html>

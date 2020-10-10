@@ -24,57 +24,94 @@
         }
 
         .origin {
+            display: flex;
             float: left;
-            width: 55%;
+            width: 50%;
+            margin-left: 30px;
+            margin-bottom: 10px;
         }
 
-        .top {
+        p {
+            margin-left: 20px;
+            font-family: monospace;
+            font-size: 17px;
+            text-shadow: 3px 3px 7px #ECF2F9;
+            text-align: justify;
+        }
+
+        img {
+            box-shadow: 1px 1px 15px #61C0BF;
+            border-radius: 0px 15px 0px 15px;
+            transition: 0.1s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .one {
             margin-left: 35px;
             float: left;
+            width: 50%;
             font-family: monospace;
             font-size: 24px;
             text-shadow: 3px 3px 7px #ECF2F9;
             text-align: justify;
+            color: brown;
         }
 
-        .right {
-            width: 600px;
-            margin-left: 50px;
+        .two {
             float: right;
-            font-family: sans-serif;
-            font-size: 17px;
-            text-shadow: 3px 3px 7px #ECF2F9;
-            text-align: justify;
+            width: 40%;
+            color: black;
         }
 
-        .bottom {
+        .three {
             margin-left: 35px;
-            float: left;
+            width: 40%;
+            float: right;
             font-family: monospace;
             font-size: 18px;
             text-shadow: 3px 3px 7px #ECF2F9;
             text-align: justify;
-            width: 100%;
+            color: firebrick;
         }
 
-        .vreska {
-            margin-right: 5%;
+        .four {
             background: #61C0BF;
-            width: 400px;
-            margin-left: 0;
+            width: 40%;
             padding: 20px;
+            margin-left: 20px;
             font-family: serif;
             font-size: 17px;
             text-align: justify;
             border: 2px solid #61C0BF;
-            float: right;
+            float: left;
             border-radius: 18px;
+            transition: 0.1s;
         }
 
-        .polosa {
-            margin-left: 5%;
-            margin-top: 3%;
-            float: left;
+        .four:hover {
+            transform: scale(1.05);
+            box-shadow: 1px 1px 15px #61C0BF;
+        }
+
+        .five {
+            margin-left: 20px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            float: right;
+            width: 60%;
+        }
+
+        table {
+            width: 50%;
+            border-color: brown;
+            border-radius: 10px;
+        }
+
+        tr td {
+            border-radius: 10px;
         }
 
     </style>
@@ -83,20 +120,18 @@
 <body>
     <H2>Funny stories</H2>
     <div class="origin">
-        <div class="Layer1" style="position: absolute; z-index: 1; width: 100; height: 100; left: 10px; top : 0px; font-family: Wingdings; font-size: 202px; color: #61C0BF">S</div>
-        <div class="layer2" style="position: absolute; z-index: 2; width: 60;height: 100; left: 49px; top: 80px; font-family: Verdana; font-size: 80px; font-weight: lighter; color: white">И</div>
-        <div class="layer3" style="position: absolute; z-index: 3; left: 120px; top: 148px; font-family: monospace;  font-size: 20px; font-weight: lighter; color: white; letter-spacing: 2">мператор Веспасиан приходит в поликлинику.<br> - Хочу сделать тест на ковид. <br>- А какие симптомы? <br>- Деньги не пахнут!</div>
+        <img src="img/kotik.jpg" width="300px" height="300px">
+        <p style="color: maroon">Император Веспасиан приходит в поликлинику.<br> - Хочу сделать тест на ковид. <br>- А какие симптомы? <br>- Деньги не пахнут!<br><br><br>Кот, обидевшись на то, что его шлепнули тапком, внес в ссанкционный список коврик в прихожей, диван в гостиной и вышеупомянутые тапочки. В случае повторения актов агрессии обещал расширить список ссанкций.</p>
     </div>
-
-    <div class="right">
+    <div class="two">
         <h3>Funny story about one man</h3>
         <p>– Ты чего такой грустный?<br>
             – Захожу вчера в метро, смотрю – сидит обалденная девушка. Молодая, ноги от ушей, красавица… Я ей и подмигнул…<br>
             – А она?<br>
-            <i>– Встала и уступила мне место!</i></p>
+            <i>– Встала и уступила мне место!</i><img src="img/kotikk.jpg" width="200px" height="230px" align="right"></p>
     </div>
 
-    <div class="top">
+    <div class="one">
         <h3>Funny story about Masha</h3>
         <FONT FACE="Courier">
             <p>На кухню пришла Маша (4 года):<br>
@@ -105,18 +140,19 @@
         </FONT>
     </div>
 
-    <div class="bottom">
+
+    <div class="three">
         <font size="+4"><b>З</b></font>адрала я такая голову повыше… И пошла, пошла царевишна!<br>Все думают — гордая! А нет… Просто так шОпли не вытекают!<br><br>
         <img src="img/bukva.png" width="50" height="60" align="left"><br>я, будучи совой, вставал все позже и позже, пока, наконец, не стал жаворонком.
     </div>
-    <div class="footer">
-        <div class="vreska">
+    <div class="bottom">
+        <div class="four">
             <p>При составлении завещания Альфред Нобель решил существенную часть своего состояния направить на учреждение премии. Он придумал <i>несколько серьезных номинаций и две шуточные</i>, заранее понимая, что их никому никогда не получить: первому родившему мужчине и первому черному президенту Америки…</p>
         </div>
 
-        <div class="polosa">
-            <table width="400" cellspacing="2" cellpadding="10" border="1">
-                <tr>
+        <div class="five">
+            <table cellspacing="1" cellpadding="10" border="3">
+                <tr border="0">
                     <td align="center" colspan="3"><b>Все люди делятя на 3 категории</b></td>
                 </tr>
                 <tr>

@@ -1,0 +1,360 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.75em;
+    font-size: 100%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #3a3939;
+    text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    font-family: 'Dosis', sans-serif;
+    background: url("img/fon3.jpg") 50%/cover no-repeat fixed;
+}
+
+.header {
+    color: #fff;
+    text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url("img/fon.jpg") 50%/cover no-repeat;
+
+}
+
+.header h1 {
+    font-size: 45px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+    padding: 15px;
+    font-size: 20px;
+    line-height: 1em;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.header a:hover {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    color: #000;
+}
+
+.header p {
+    margin: 0;
+    border-top: solid 1px rgba(255, 255, 255, 0.5);
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.header p:before {
+    content: '';
+    display: block;
+    border-top: solid 1px rgba(255, 255, 255, 0.5);
+    margin: 4px 0 0.8em 0;
+}
+
+#heart img {
+    width: 60px;
+    position: absolute;
+    z-index: 2;
+    padding: 20px;
+    animation-name: heart;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+#second {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(img/fon1.jpg) 50%/cover no-repeat;
+    position: relative;
+}
+
+#second h2 {
+    margin: 0;
+    font-size: 40px;
+    text-transform: uppercase;
+
+}
+
+#second p {
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.75em;
+    padding: 40px;
+
+}
+
+.info {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 50px;
+}
+
+.inner_info {
+    width: 65%;
+    height: 60vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.inner_info img {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.inner_info .text_info {
+    padding: 50px;
+    text-align: justify;
+}
+
+.descr {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    width: 35%;
+    height: 30vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+
+}
+
+.about p {
+    padding: 50px;
+    text-align: justify;
+    font-size: 30px;
+    text-align: center;
+    align-self: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin: 30px;
+    height: 1400px;
+}
+
+.item {
+    transition: .4s;
+    outline: grey dotted;
+}
+
+.item:nth-child(1) {
+    background: url(img/katya1.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(2) {
+    background: url(img/sofia1.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(3) {
+    background: url(img/katya2.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(4) {
+    background: url(img/sofia2.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(5) {
+    background: url(img/katya3.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(6) {
+    background: url(img/sofia3.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(7) {
+    background: url(img/katya4.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(8) {
+    background: url(img/sofia4.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(9) {
+    background: url(img/katya5.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(10) {
+    background: url(img/sofia5.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(11) {
+    background: url(img/katya6.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(12) {
+    background: url(img/sofia6.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(13) {
+    background: url(img/katya7.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(14) {
+    background: url(img/sofia7.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(15) {
+    background: url(img/katya8.jpg) 50% 0/cover no-repeat;
+}
+
+.item:nth-child(16) {
+    background: url(img/sofia8.jpg) 50% 0/cover no-repeat;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #fff;
+}
+
+@media (min-width:1400px) {
+    .inner_info .text_info {
+        font-size: 27px;
+    }
+
+    .gallery {
+        height: 200vh;
+    }
+}
+
+@media (max-width:1300px) {
+    .inner_info {
+        display: block;
+
+    }
+
+    .inner_info img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .inner_info .text_info {
+        background-color: white;
+        padding: 25px;
+        font-size: 25px;
+    }
+
+    .descr {
+        margin-top: 250px;
+    }
+
+    .descr .about p {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 800px) {
+    #second h2 {
+        font-size: 25px;
+    }
+
+    #second p {
+        font-size: 18px;
+    }
+
+    .inner_info {
+        display: block;
+    }
+
+    .inner_info img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .inner_info .text_info {
+        background-color: white;
+        padding: 25px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-gap: 15px;
+        margin: 15px;
+        height: 300vh;
+    }
+}
+
+@media (max-width:500px) {
+    #second h2 {
+        font-size: 20px;
+    }
+
+    .inner_info {
+        width: 90%;
+    }
+
+    .inner_info .text_info {
+        background-color: white;
+        padding: 25px;
+        font-size: 17px;
+    }
+
+    .descr .about {
+        width: 90%;
+    }
+}
+
+@media (max-width:400px) {
+    #second h2 {
+        font-size: 17px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(16, 1fr);
+        grid-gap: 10px;
+        margin: 5px;
+        height: 800vh;
+    }
+}

@@ -173,6 +173,35 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
+form {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.685);
+}
+
+.button {
+    margin: 10px 20px;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: .3s;
+    border: 1px dashed #000;
+    font-size: 23px;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.ru {
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.685);
+    transition: .3s;
+    font-size: 27px;
+}
+
 @media (min-width: 1900px) {
     .header_inner h1 {
         font-size: 80px;

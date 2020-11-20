@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stepan&amp;Andrew</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <div class="header_inner">
+            <h1>Stepan&amp;Andrew</h1>
+            <p>Friendship that can be compared to a tree</p>
+            <a href="#header" onClick="alert('Вы точно в этом уверены? Это может быть опасно!')">Learn more about these guys</a>
+        </div>
+    </div>
+    <div id="second">
+        <h2><a href="#second" onclick="myFunc()">About their friendship</a></h2>
+        <p>It makes sense to say that their friendship can be compared to a tree. Its seed should find good soil and under favourable conditions it will grow into a tree. As the years go by the tree stands firmer and firmer on the ground and if it is strong enough it will survive all the storms and winds, but to help it we should take care of it and love it. <br>
+            The most important thing for being good friends, to my mind, is to be ready to help one another in any situation, nevertheless how difficult it is, to support one another and to solve all the problems together. And never mind, that the friends may have different interests and hobbies, different likes and dislikes. They say that the friend in need is a friend indeed.<br>Friends make our life happier and more interesting. It is difficult to find a true friend. If you do something wrong you may lose a friend, that’s why always think how to keep friendship. If you want to have a friend, you have to be a good friend yourself.</p>
+    </div>
+    <div id="third">
+        <div class="third_left">
+            <h2><a href="#third" style="color: #3a3939" onclick="return ChangeColor(this);">Andrew</a></h2>
+            <p>Andrew is an optimistic person. He is well-balanced and quite reserved, always keeps calm in critical situations. Andrew is quite sensible and practical but very responsible, purposeful and assertive. He is also very intelligent and resourceful. He has a good sense of humour and a great imagination.</p>
+        </div>
+        <div class="third_right">
+            <img src="img/and.jpg">
+        </div>
+    </div>
+    <div id="fourth">
+        <div class="fourth_left">
+            <img src="img/step.jpg">
+        </div>
+        <div class="fourth_right">
+            <h2><a href="#fourth" style="color: #3a3939" onclick="return ChangeColor(this);">Stepan</a></h2>
+            <p>Stepan is a cheerful person, he doesn’t allow anyone to insult other people. Stepan is a sociable, kind and modest person. Sometimes he is witty, but his jokes are never wicked.He has an amazing sense of humor. Also he is very reliable and good at keeping secrets. </p>
+        </div>
+    </div>
+    <div id="gallery">
+        <img src="img/an1.jpg">
+        <img src="img/pic2.jpg">
+        <img src="img/an2.jpg">
+        <img src="img/pic1.jpg">
+        <img src="img/an3.jpg">
+        <img src="img/pic3.jpg">
+        <img src="img/an4.jpg">
+        <img src="img/pic4.jpg">
+        <img src="img/an5.jpg">
+        <img src="img/picc.jpg">
+        <img src="img/step1.jpg">
+    </div>
+    <div id="fifth">
+        <input type="button" value="Кликните, чтобы увидеть форму" id="show-button">
+        <div id="container">
+            <form id="form">
+                <div id="message"></div>
+                <input name="text" type="text">
+                <input type="submit" value="Ok">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function myFunc() {
+            let newWindow = window.open(),
+                newWindowDocument = newWindow.document;
+            newWindowDocument = newWindow.document;
+            newWindowDocument.open("text/html", "replace");
+            newWindowDocument.write("<html><head><title>Ёууууууууууууууууууууууууууууууу</title></head><body>");
+            newWindowDocument.write("<h1 style='font-size:50px'>Пливееееееееееееееееееет</h1>");
+            newWindowDocument.write("Пусть накроет с головою, море позитива, и проходят стороною все проблемы мимо. И преследует везение с самого утра. А хорошее настроение, не покинет никогда!");
+            newWindowDocument.write('<img src="img/step.jpg" style="width: 400px; height: 500px; border-radius:20px">');
+            newWindowDocument.write('<img src="img/and.jpg" style="width: 400px; height: 500px; border-radius:20px">');
+            newWindowDocument.close();
+        }
+
+        function ChangeColor(Element) {
+            return Element.style.color = "#9370DB";
+        }
+
+        let firstName = 'Дмитрий';
+        let sName = 'Витальевич';
+
+        let greeting = `Добрый денечек, ${firstName} ${sName}. Хорошего дня!`;
+        console.log(greeting);
+
+        function clock() {
+            var date = new Date(),
+                hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
+                minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
+                seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+            console.log('Текущее время: ' + hours + ':' + minutes + ':' + seconds);
+        }
+        setInterval(clock, 5000);
+        var str = "Приветик";
+        var str1 = ",";
+        var str2 = "умничка!";
+        var result = str.concat(str1, str2);
+        console.log("Метод concat: " + result);
+
+
+        function showCover() {
+            let coverDiv = document.createElement('div');
+            coverDiv.id = 'cover-div';
+            document.body.style.overflowY = 'hidden';
+            document.body.append(coverDiv);
+        }
+
+        function hideCover() {
+            document.getElementById('cover-div').remove();
+            document.body.style.overflowY = '';
+        }
+
+        function showPrompt(text, callback) {
+            showCover();
+            let form = document.getElementById('form');
+            let container = document.getElementById('container');
+            document.getElementById('message').innerHTML = text;
+            form.text.value = '';
+
+            function complete(value) {
+                hideCover();
+                container.style.display = 'none';
+                callback(value);
+            }
+
+            form.onsubmit = function() {
+                let value = form.text.value;
+                if (value == '') return false;
+                complete(value);
+                return false;
+            }
+
+            container.style.display = 'block';
+            form.elements.text.focus();
+        }
+
+        document.getElementById('show-button').onclick = function() {
+            showPrompt("Пожелайте нам что-нибудь :)", function(value) {
+                alert("Вы ввели: " + value);
+            });
+        };
+
+    </script>
+
+</body>
+
+</html>

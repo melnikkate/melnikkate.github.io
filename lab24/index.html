@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>X-mas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="gir" class="gir_3">
+        <div id="nums_1">1</div>
+    </div>
+
+    <div id="header">
+        <div class="header_inner">
+            <h1>Christmas</h1>
+            <p>Are you ready for it?</p>
+            <a href="#second">Learn more about this</a>
+        </div>
+    </div>
+    <div id="second">
+        <h2>Being productive at home</h2>
+        <p>X-mas inspires people with belief in the realness of miracles. I suppose we will celebrate this feast for centuries in future.Christmas is one of the most important holidays in Christianity. A lot of people consider that Jesus Christ was born on this day many years ago. It’s a sacred festival that’s why orthodox believers gather in the churches to attend the feast rite on Christmas.</p>
+        <div class="second_inner">
+            <img src="img/mem.jpg">
+            <img src="img/mem2.jpg">
+            <img src="img/mem4.jpg">
+            <img src="img/mem3.jpg">
+            <img src="img/mem1.jpg">
+        </div>
+    </div>
+    <div id="third">
+        <h1>X-mas is almost here</h1>
+        <div class="countdown">
+            <div id="days">na</div>
+            <div id="hours">na</div>
+            <div id="minutes">na</div>
+            <div id="seconds">na</div>
+        </div>
+    </div>
+    <div id="fourth">
+        <h2>If you can't wait, just do smth interesting like <a href="https://santatracker.google.com/#village">this</a></h2>
+        <div class="fourth_inner">
+            <div class="images">
+                <img src="img/pic4.gif">
+            </div>
+            <div class="images">
+                <img src="img/pic1.gif">
+            </div>
+            <div class="images">
+                <img src="img/pic3.gif">
+            </div>
+            <div class="images">
+                <img src="img/pic2.txt">
+            </div>
+            <div class="images">
+                <img src="img/pic5.gif">
+            </div>
+            <div class="images">
+                <img src="img/pic6.gif">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function gir() {
+            nums = document.getElementById('nums_1').innerHTML
+            if (nums == 1) {
+                document.getElementById('gir').className = 'gir_1';
+                document.getElementById('nums_1').innerHTML = '2'
+            }
+            if (nums == 2) {
+                document.getElementById('gir').className = 'gir_2';
+                document.getElementById('nums_1').innerHTML = '3'
+            }
+            if (nums == 3) {
+                document.getElementById('gir').className = 'gir_3';
+                document.getElementById('nums_1').innerHTML = '1'
+            }
+        }
+        setInterval(function() {
+            gir()
+        }, 500)
+
+        var countDate = new Date('Dec 25, 2020 00:00:00').getTime();
+
+        function Xmas() {
+            var now = new Date().getTime();
+            var gap = countDate - now;
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+            var d = Math.floor(gap / (day));
+            var h = Math.floor((gap % (day)) / (hour));
+            var m = Math.floor((gap % (hour)) / (minute));
+            var s = Math.floor((gap % (minute)) / (second));
+            document.getElementById('days').innerText = d;
+            document.getElementById('hours').innerText = h;
+            document.getElementById('minutes').innerText = m;
+            document.getElementById('seconds').innerText = s;
+        }
+        setInterval(function() {
+            Xmas();
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

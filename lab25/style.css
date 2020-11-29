@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    background: #FFE2E2;
+    font-family: 'Nerko One', cursive;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+#header h1 {
+    font-size: 100px;
+    margin: 0;
+    color: #8785A2;
+}
+
+#header img {
+    width: auto;
+    height: 120px;
+}
+
+#about {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+#about h1 {
+    color: #8785A2;
+    font-size: 40px;
+    margin: 0;
+}
+
+#about img {
+    width: 140px;
+    height: auto;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+#about img:hover {
+    box-shadow: 0 0 5px #61C0BF;
+    transform: scale(1.15);
+}
+
+#about p {
+    color: #521262;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#about form {
+    padding: 20px;
+    font-size: 25px;
+    color: #8785A2;
+}
+
+#about input {
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#about input[type="submit"],
+input[type="button"] {
+    background-color: #CABBE9;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+#gallery img {
+    width: 200px;
+    height: auto;
+}
+
+.inner {
+    background: lightpink;
+    width: auto;
+    height: 200px;
+    padding: 20px;
+    margin: 3px 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*Media*/
+/*
+@media (min-width:1850px) {
+
+    /*#header h1 {
+        font-size: 140px;
+    }
+
+    #header img {
+        width: auto;
+        height: 150px;
+    }
+
+#about h1 {
+    font-size: 80px;
+}
+
+#about img {
+    width: 200px;
+    height: auto;
+}
+
+#about p {
+    font-size: 35px;
+}
+
+#about form {
+    font-size: 35px;
+}
+
+#about input {
+    font-size: 25px;
+}
+
+#gallery img {
+    width: 300px;
+    height: auto;
+}
+
+.inner {
+    width: auto;
+    height: 200px;
+    padding: 20px;
+    margin: 3px 10px;
+}
+}
+
+/*
+@media (max-width:1200px) {
+    #about {
+        padding: 0;
+    }
+
+    #about h1 {
+        font-size: 40px;
+    }
+
+    #about img {
+        width: 200px;
+        height: auto;
+    }
+
+    #about p {
+        font-size: 20px;
+        padding: 22px;
+    }
+
+    #about form {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    #about input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:900px) {
+    #header h1 {
+        font-size: 90px;
+    }
+
+    #about p {
+        font-size: 18px;
+    }
+
+    #about img {
+        width: 150px;
+        height: auto;
+    }
+
+    #about form {
+        font-size: 16px;
+    }
+
+    #about input {
+        font-size: 14px;
+    }
+}

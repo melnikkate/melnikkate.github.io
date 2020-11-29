@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="gallery">
+        <div class="inner">
+            <img src="img/pic3.gif" alt="">
+        </div>
+        <div class="inner">
+            <img src="img/pic6.gif" alt="">
+        </div>
+        <div class="inner">
+            <img src="img/pic4.gif" alt="">
+        </div>
+        <div class="inner">
+            <img src="img/pic5.gif" alt="">
+        </div>
+        <div class="inner">
+            <img src="img/pic8.gif" alt="">
+        </div>
+        <div class="inner">
+            <img src="img/pic7.gif" alt="">
+        </div>
+    </div>
+    <div id="welcome"></div>
+    <div id="result"></div>
+    <form action="" class="character__btn" style="display: flex;
+    justify-content: center;">
+        <input class="btn" type="button" value="Push me!" onclick="newWindow()">
+    </form>
+
+    <script>
+        //browser
+        var browser, uAgent = navigator.userAgent;
+        if (uAgent.indexOf("Chrome") > -1) {
+            browser = "Google Chrome";
+        } else if (uAgent.indexOf("Safari") > -1) {
+            browser = "Apple Safari";
+        } else if (uAgent.indexOf("Opera") > -1) {
+            browser = "Opera";
+        } else if (uAgent.indexOf("Firefox") > -1) {
+            browser = "Mozilla Firefox";
+        } else if (uAgent.indexOf("MSIE") > -1) {
+            browser = "Microsoft Internet Explorer";
+        }
+        console.log('Ваш браузер: ' + browser);
+        //alert + prompt
+        const number = 7;
+        let result = false;
+        while (!result) {
+            const answer = prompt('Давай поиграем! Угадай-ка число от 1 до 10?');
+            if (answer === null) {
+                break;
+            }
+            switch (+answer) {
+                case number - 2:
+                case number + 2:
+                    alert('Уже теплее!');
+                    break;
+                case number - 1:
+                case number + 1:
+                    alert('Горячо!');
+                    break;
+                case number:
+                    alert('Умнитька! Это число ' + number);
+                    result = true;
+                    break;
+                default:
+                    alert('Холодно!');
+            }
+        }
+        //open+close
+        function newWindow() {
+            let id
+            id = window.open()
+            id.focus()
+            id.document.open()
+            id.document.write('<h1>Йоооу</h1>')
+            id.document.write('<img src="img/pic8.gif" alt=""></img>')
+            id.document.write('<form><input type="button" value="close" onClick="window.close()"> </form>')
+            id.document.close
+        }
+        //alert
+        const name = prompt('Пожалуйста, представьтесь?');
+        if (name) {
+            document.querySelector('#welcome');
+            alert(name + ', добро пожаловать на сайтик!');
+        } else {
+            document.querySelector('#welcome');
+            alert('Добро пожаловать на сайтик!');
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>5FeetApart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <div class="header_inner">
+            <h1>Five feet apart</h1>
+            <a href="#second">Learn more about this</a>
+        </div>
+    </div>
+    <div id="second">
+        <h2>Description</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nihil perspiciatis possimus rem explicabo quam sapiente dolore voluptas repellendus consectetur voluptatibus blanditiis natus ipsam qui eaque suscipit incidunt beatae, perferendis!
+            Illum placeat dolores dicta veniam, ipsum dolor nulla ratione minus! Architecto libero ipsum quasi molestiae praesentium repellat quod voluptatem magni, vitae, neque voluptatibus placeat error est a quia consectetur blanditiis!
+            Officia praesentium doloribus provident, laborum iste? Iure voluptatem perspiciatis magnam, nostrum laboriosam voluptatum voluptas. Accusantium itaque dolor laboriosam officiis omnis, expedita excepturi necessitatibus! Commodi rem aliquid possimus corporis laudantium magnamCommodi rem aliquid possimus corporis laudantium magnamCommodi rem aliquid possimus corporis laudantium magnamCommodi rem aliquid possimus corporis laudantium magnam.</p>
+    </div>
+    <div id="third">
+        <div class="third_inner">
+            <img id="picture" src="img/kot.jpg" onClick="imgsrc();">
+        </div>
+    </div>
+    <div id="fourth">
+        <div class="fourth_inner">
+            <img class="picpic" src="img/ping0.jpg" id='0'>
+        </div>
+        <div class="fourth_inner">
+            <img class="picpic" src="img/ping1.jpg" id='1'>
+        </div>
+        <div class="fourth_inner">
+            <img class="picpic" src="img/ping2_blur.jpg" id='2'>
+        </div>
+    </div>
+    <div id="five">
+        <a href="https://www.imdb.com/title/tt6472976/" onClick="return window.confirm('OK?');">Want to know more?</a>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = back_gr;
+
+        function back_gr() {
+            var images = document.getElementsByClassName('picpic'); /* Объект images содержит все изображения и работает как массив */
+            for (i = 0; i < images.length; i++) {
+                images[i].onmouseover = change; /* Назначаем один обработчик change для всех изображений, при возникновении события наведения указателя мыши на любое из них. Для этого используем свойство onmouseover */
+                images[i].onmouseout = re_change; /* Аналогично назначаем один обработчик re_change для всех картинок, при возникновении события выхода указателя мыши за их границы. Для этого используем свойство onmouseout */
+            }
+        }
+
+        function change(eventObj) {
+            var images_1 = eventObj.target; /* сообщаем, какой элемент, т.е. какое изображение сгенерировало событие наведение указателя */
+            images_1.src = "img/ping" + images_1.id + ".jpg" /* меняем src соответствующего изображения, тем самым делая его полноценным */
+        }
+
+        function re_change(eventObj) {
+            var images_2 = eventObj.target; /* сообщаем, какой элемент, т.е. какое изображение сгенерировало событие выхода указателя за его пределы */
+            images_2.src = "img/ping" + images_2.id + "_blur.jpg" /* Делаем изображение размытым */
+        }
+        var i = 0;
+        var image = document.getElementById("picture");
+        // Добавьте свои картинки в массив через запятую
+        var imgs = new Array('img/kot.jpg', 'img/kot1.jpg', 'img/kot2.jpg', 'img/kot3.jpg', 'img/kot4.jpg', 'img/kot5.jpg');
+
+        function imgsrc() {
+            i++;
+            i %= imgs.length;
+            image.src = imgs[i];
+        }
+
+    </script>
+</body>
+
+</html>

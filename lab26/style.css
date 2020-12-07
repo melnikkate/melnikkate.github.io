@@ -1,0 +1,291 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.75em;
+    font-size: 100%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #3a3939;
+    text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    font-family: 'Nerko One', cursive;
+    background: url("img/pic.jpg") 50%/cover no-repeat fixed;
+}
+
+#first {
+    display: flex;
+    height: 100vh;
+}
+
+nav {
+    text-align: center;
+    padding: 40px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    color: #222;
+}
+
+.topmenu > li {
+    display: inline-block;
+    position: relative;
+}
+
+.topmenu > li > a {
+    color: #fff;
+    position: relative;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.topmenu > li > a:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 100%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    transition: .3s;
+}
+
+.topmenu li:hover a:before {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.submenu {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 100%;
+    width: 150px;
+    padding: 15px 0 15px;
+    margin-top: 5px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: .3s;
+}
+
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.submenu a {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: .2s linear;
+}
+
+.submenu a:hover {
+    background: #e8e8e8;
+}
+
+/*Second page*/
+#second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #FFCEF3;
+    opacity: 0.95;
+    color: #393939;
+    height: 100vh;
+}
+
+#second h2 {
+    margin-top: 40px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+#second p {
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.75em;
+    padding: 20px 100px 0;
+}
+
+#step1,
+#step2,
+#step3,
+#step4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #393939;
+    height: 70vh;
+}
+
+#step1 h3,
+#step2 h3,
+#step3 h3,
+#step4 h3 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#step1 p,
+#step2 p,
+#step3 p,
+#step4 p {
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.75em;
+    padding: 0 100px 0;
+}
+
+#mem1,
+#mem2,
+#mem3 {
+    display: flow-root;
+    color: #393939;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 7%;
+}
+
+.pics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pics img {
+    width: 400px;
+    height: 370px;
+}
+
+@media (min-width:1900px) {
+    .topmenu > li > a {
+        font-size: 40px;
+    }
+
+    #second h2 {
+        font-size: 90px;
+    }
+
+    #second p {
+        font-size: 45px;
+    }
+
+    #step1 p,
+    #step2 p,
+    #step3 p,
+    #step4 p {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    .pics img {
+        width: 550px;
+        height: 500px;
+    }
+}
+
+@media (max-width:1000px) {
+    .pics img {
+        padding: 10px;
+    }
+}
+
+@media (max-width:800px) {
+
+    #step1 h3,
+    #step2 h3,
+    #step3 h3,
+    #step4 h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #mem1,
+    #mem2,
+    #mem3 {
+        height: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    #second h2 {
+        font-size: 40px;
+    }
+
+    #second p {
+        font-size: 25px;
+        padding: 0 20px;
+    }
+
+    #step1 p,
+    #step2 p,
+    #step3 p,
+    #step4 p {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width:400px) {
+
+    #second h2 {
+        font-size: 30px;
+    }
+
+    #second p {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    #step1 p,
+    #step2 p,
+    #step3 p,
+    #step4 p {
+        font-size: 18px;
+        padding: 0 50px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+
+    .pics img {
+        width: 300px;
+        height: 270px;
+    }
+}

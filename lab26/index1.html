@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Вкусняшкииии</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: #FFCEF3;">
+    <div id="another">
+        <h1>Если очень хочется, можно себя побаловать&#41;</h1>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#"><img src="img/treug.png">Сладости</a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="https://vse-kursy.com/read/773-uroki-nachinayuschego-konditera.html">Торт</a>
+                    </li>
+                    <li>
+                        <a href="https://lifehacker.ru/ponchiki-recepty/">Пончик</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/playlist?list=PLMmTkp_rPQzkZNH4C9CGsR8HXIBOxkUHl">Пирожное</a>
+                    </li>
+                    <li>
+                        <a href="https://1000.menu/catalog/domashnii-shokolad">Шоколадка</a>
+                    </li>
+                    <li>
+                        <a href="https://www.povarenok.ru/letnie-recepty/morozhenoe-v-domashnih-usloviyah/">Мороженое</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="an_inner">
+            <img src="img/tort.jpg">
+        </div>
+        <div class="an_inner">
+            <img src="img/ponchik.jpg">
+        </div>
+        <div class="an_inner">
+            <img src="img/pirozhn.jpg">
+        </div>
+        <div class="an_inner">
+            <img src="img/shokolod.jpg">
+        </div>
+        <div class="an_inner">
+            <img src="img/morozhn.jpg">
+        </div>
+    </div>
+    <script>
+        var el = document.getElementsByClassName('menu-item');
+        for (var i = 0; i < el.length; i++) {
+            el[i].addEventListener("mouseenter", showSub, false);
+            el[i].addEventListener("mouseleave", hideSub, false);
+        }
+
+        function showSub(e) {
+            if (this.children.length > 1) {
+                this.children[1].style.height = "auto";
+                this.children[1].style.overflow = "visible";
+                this.children[1].style.opacity = "1";
+            } else {
+                return false;
+            }
+        }
+
+        function hideSub(e) {
+            if (this.children.length > 1) {
+                this.children[1].style.height = "0px";
+                this.children[1].style.overflow = "hidden";
+                this.children[1].style.opacity = "0";
+            } else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

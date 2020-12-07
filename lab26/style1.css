@@ -1,0 +1,77 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #3a3939;
+    text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    font-family: 'Nerko One', cursive;
+    font-size: 30px;
+}
+
+.menu {
+    display: block;
+    list-style-type: none;
+}
+
+.sub-menu {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a img {
+    width: 20px;
+    height: auto;
+    transform: rotate(90deg);
+}
+
+a img:hover {
+    transform: rotate(180deg);
+}
+
+#another {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#another h1 {
+    font-size: 60px;
+    text-align: center;
+    color: #393939;
+    margin: 0 20px;
+}
+
+.an_inner {
+    width: 350px;
+    height: 300px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.an_inner img {
+    width: auto;
+    height: 350px;
+    transition: .3s;
+}
+
+.an_inner img:hover {
+    transform: scale(1.15);
+}

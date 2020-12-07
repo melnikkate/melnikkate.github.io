@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JustSurvive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Menu-->
+    <nav>
+        <ul class="topmenu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="" class="down">Survive</a>
+                <ul class="submenu">
+                    <li><a href="#step1">Step 1</a></li>
+                    <li><a href="#step2">Step 2</a></li>
+                    <li><a href="#step3">Step 3</a></li>
+                    <li><a href="#step4">Step 4</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="down">Mems</a>
+                <ul class="submenu">
+                    <li><a href="#mem1">Mem 1</a></li>
+                    <li><a href="#mem2">Mem 2</a></li>
+                    <li><a href="#mem3">Mem 3</a></li>
+                </ul>
+            </li>
+            <li><a href="index1.html">Sweets</a></li>
+        </ul>
+    </nav>
+    <div id="first">
+
+    </div>
+    <div id="second">
+        <h2>About IT</h2>
+        <p>You have devoted hours, days and weeks to participating in classes and soaking up every word of wisdom your teachers and professors have shared in class. The only thing left before your well-earned summer break are your final exams, and despite all the hard work you put into your assignments and group projects during the year, final exams often decide whether you’ll spend your summer sunbathing or cramming for exams you flunked and need to retake.
+
+            But don’t despair. We’ve put together a short list of tips and tricks that will help you survive your final exams and spend the summer enjoying poolside drinks instead of dusty books.</p>
+    </div>
+    <div id="third">
+        <div id="step1" style="background-color: #CABBE9">
+            <h3>Plan </h3>
+            <p>Planning is everything! In order to keep track of all your exams and all the different topics you have to study for, make sure to schedule your studies carefully. Take some time to make your own personalized schedule with a clear outline of what you’re going to study when. </p>
+        </div>
+        <div id="step2" style="background-color: #A1EAFB">
+            <h3>Take your time </h3>
+            <p>Planning is everything! In order to keep track of all your exams and all the different topics you have to study for, make sure to schedule your studies carefully. Take some time to make your own personalized schedule with a clear outline of what you’re going to study when. </p>
+        </div>
+        <div id="step3" style="background-color: #FDFDFD">
+            <h3>Remember to… Sleep, Eat Healthy &amp; Work Out</h3>
+            <p>You need to keep yourself well-rested and focused in order to process more material. Make sure you have a proper breakfast, lunch and dinner with two healthy snacks in between instead. When you’re doing cardio (running, swimming, cycling etc.) your brain is filling up with oxygen, making it better equipped at processing and retaining new information. </p>
+        </div>
+        <div id="step4" style="background-color: #BAD7DF">
+            <h3>And then… Celebrate! </h3>
+            <p>It’s time to celebrate that you survived your finals! You followed my tips, did your best and now it’s too late to change the outcome, so stop stressing about it. Make sure to appreciate the feeling of freedom after all the hard work.
+
+                And if your exam results turn out worse than you expected, worry not; life is great at giving us second chances!</p>
+        </div>
+    </div>
+    <div id="fourth">
+        <div id="mem1" style="background-color: #FDFDFD">
+            <h2>Smiiiiiiiiiiiiiiiiiiiiiiile*1</h2>
+            <div class="pics">
+                <img src="img/mem1.jpg">
+                <img src="img/mem7.jpg">
+                <img src="img/mem4.jpg">
+            </div>
+        </div>
+        <div id="mem2" style="background-color: #FFE2E2">
+            <h2>Smiiiiiiiiiiiiiiiiiiiiiiile*2</h2>
+            <div class="pics">
+                <img src="img/mem2.jpg">
+                <img src="img/mem5.jpg">
+                <img src="img/mem3.jpg">
+            </div>
+        </div>
+        <div id="mem3" style="background-color: #99DDCC">
+            <h2>Smiiiiiiiiiiiiiiiiiiiiiiile*3</h2>
+            <div class="pics">
+                <img src="img/mem6.jpg">
+                <img src="img/mem9.jpeg">
+                <img src="img/mem8.jpeg">
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        //горизонтальное меню
+        $(document).ready(function() {
+            $("#menu ul").hide();
+            $("#menu li span").click(function() {
+                $(this).next().slideToggle("normal");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

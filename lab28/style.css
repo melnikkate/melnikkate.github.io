@@ -1,0 +1,165 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.75em;
+    font-size: 100%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #3a3939;
+    text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    font-family: 'Nerko One', cursive;
+    background: linear-gradient(180deg, #e3adca, #9db6c7);
+}
+
+/*Fisrt page*/
+#header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #e3adca, #9db6c7);
+}
+
+.header_inner {
+    color: #521262;
+    text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50vh;
+    padding: 30px;
+}
+
+.header_inner h1 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding: 20px;
+    text-align: center;
+    border: dotted 2px #6639A6;
+    border-radius: 20px;
+
+}
+
+.header_inner h1:before {
+    content: '';
+    display: block;
+    width: 50%;
+}
+
+.header_inner a {
+    text-decoration: none;
+    color: #521262;
+    transition: .3s;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.header_inner a:hover {
+    background-color: whitesmoke;
+    color: #000;
+}
+
+/*Second page*/
+#second {
+    height: 100vh;
+    width: auto;
+    background: url(pic.gif) 50% /cover no-repeat;
+}
+
+/*Third page*/
+#third {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.third_left {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.third_left h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 40px;
+    color: #6639A6;
+}
+
+.third_left p {
+    font-size: 25px;
+    padding: 20px 10px 10px 50px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.third_right {
+    text-align: center;
+    align-self: center;
+}
+
+.third_right img {
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    box-shadow: 20px 20px 0px -10px #6639A6;
+}
+
+#fourth {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourth_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 70vh;
+}
+
+.fourth_inner img {
+    height: 100%;
+    width: auto;
+    border-radius: 20px;
+}
+
+#fourth a {
+    text-decoration: none;
+    color: #6639A6;
+    font-size: 35px;
+}
+
+/*Media*/
+@media (min-width:1900px) {
+    .header_inner h1 {
+        font-size: 100px;
+    }
+
+    .header_inner a {
+        font-size: 40px;
+    }
+
+    .third_left h2 {
+        font-size: 80px;
+    }
+
+    .third_left p {
+        font-size: 43px;
+    }
+
+    #fourth a {
+        font-size: 50px;
+        margin: 20px;
+    }
+}

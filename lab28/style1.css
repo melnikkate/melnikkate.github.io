@@ -1,0 +1,239 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: 1.75em;
+    font-size: 100%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #521262;
+    text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    font-family: 'Dancing Script', cursive;
+    background: url(img/picpic.jpg) 50%/ cover no-repeat;
+}
+
+h1 {
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+
+/*Navigation*/
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    color: #222;
+}
+
+.main > li {
+    display: inline-block;
+    position: relative;
+}
+
+.main > li > a {
+    color: #521262;
+    position: relative;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.main > li > a:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 100%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    transition: .3s;
+}
+
+.main li:hover a:before {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+/*Header*/
+#header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_inner {
+    color: #521262;
+    text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50vh;
+}
+
+.header_inner h1 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #521262;
+}
+
+.header_inner p {
+    font-size: 30px;
+    text-align: justify;
+}
+
+.header_inner a {
+    text-decoration: none;
+    color: #521262;
+    transition: .3s;
+    padding: 15px;
+    font-size: 30px;
+    background-color: #FFE2E2;
+    border-radius: 20px;
+}
+
+.header_inner a:hover {
+    background-color: #9C7CD0;
+    color: #fff;
+}
+
+/*About page*/
+#about {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FAE3D9;
+}
+
+.a_left {
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.a_left img {
+    width: 60%;
+    height: 80%;
+    box-shadow: 15px 15px 10px #6C42B8;
+}
+
+.a_right {
+    width: 60%;
+    height: auto;
+    font-size: 30px;
+    padding-right: 5%;
+}
+
+.a_right h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#portfolio {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    background-color: #FAE3D9;
+}
+
+#portfolio img {
+    width: 30%;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#portfolio img[tabindex="0"] {
+    cursor: zoom-in;
+}
+
+#portfolio img[tabindex="0"]:focus {
+    position: fixed;
+    background: #fff;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 60%;
+    max-height: 80%;
+    margin: auto;
+}
+
+#portfolio img[tabindex="0"]:focus,
+#portfolio img[tabindex="0"]:focus ~ * {
+    cursor: zoom-out;
+    pointer-events: none;
+}
+
+#mems {
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    background-color: #6639A6;
+    padding: 10% 0;
+}
+
+#mems img {
+    width: 40%;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+
+#str {
+    font-size: 80px;
+    color: #521262;
+}
+
+@media (min-width:1900px) {
+    .header_inner {
+        width: 60%;
+        height: 50vh;
+    }
+
+    .header_inner h1 {
+        font-size: 100px;
+    }
+
+    .header_inner p {
+        font-size: 50px;
+        line-height: 1.75em;
+    }
+
+    .a_right {
+        font-size: 47px;
+        line-height: 1.5em;
+    }
+
+    .a_right h2 {
+        font-size: 80px;
+        text-align: center;
+    }
+}

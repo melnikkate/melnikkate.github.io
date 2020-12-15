@@ -70,7 +70,7 @@ body {
 #second {
     height: 100vh;
     width: auto;
-    background: url(pic.gif) 50% /cover no-repeat;
+    background: url(img/pic.gif) 50% /cover no-repeat;
 }
 
 /*Third page*/
@@ -136,7 +136,7 @@ body {
 
 #fourth a {
     text-decoration: none;
-    color: #6639A6;
+    color: #6639B9;
     font-size: 35px;
 }
 
